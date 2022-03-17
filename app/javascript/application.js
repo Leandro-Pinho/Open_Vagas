@@ -2,6 +2,9 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
+//= require jquery-ui
+//= require jquery3
+//= require jquery_ujs
 
 (function () {
     'use strict'
@@ -10,3 +13,5 @@ import "controllers"
       document.querySelector('.offcanvas-collapse').classList.toggle('open')
     })
 })()
+
+

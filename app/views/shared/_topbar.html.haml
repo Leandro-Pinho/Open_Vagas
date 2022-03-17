@@ -8,15 +8,15 @@
         %li.nav-item
           %a.nav-link.active{"aria-current" => "page", :href => root_path} Inicio
         %li.nav-item
-          %a.nav-link{:href => "#"} Login/cadastro
-        
-        %li.nav-item.dropdown
-          %a#dropdown01.nav-link.dropdown-toggle{"aria-expanded" => "false", "data-bs-toggle" => "dropdown", :href => "#"} Settings
-          %ul.dropdown-menu{"aria-labelledby" => "dropdown01"}
-            %li
-              %a.dropdown-item{:href => "#"} Action
-            %li
-              %a.dropdown-item{:href => "#"} Another action
-            %li
-              %a.dropdown-item{:href => "#"} Something else here
-      
+          %a.nav-link.active{"aria-current" => "page", :href => root_path} Minha Empresa
+        - unless user_signed_in?
+          %li.nav-item
+          = link_to "Login/Cadastro", new_user_session_path, :class => 'nav-link'
+        - if user_signed_in?
+          %li.nav-item.dropdown
+            %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"aria-expanded" => "false", "data-bs-toggle" => "dropdown", :href => "#", :role => "button"}
+              Sair
+            %ul.dropdown-menu{"aria-labelledby" => "navbarDropdownMenuLink"}
+              = button_to "Sign Out", destroy_user_session_path, method: :delete, class: "dropdown-item"
+                
+            

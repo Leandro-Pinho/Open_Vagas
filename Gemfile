@@ -56,6 +56,8 @@ gem "sassc-rails"
 
 gem 'bootstrap', '~> 5.1.3'
 
+gem 'jquery-rails'
+
 # gem 'Kaminari'
 # gem 'Kaminari-bootstrap'
 # gem 'ransack'
