@@ -49,6 +49,10 @@ gem 'simple_form'
 
 gem 'devise'
 
+gem 'devise-i18n'
+
+gem 'rails-i18n', '~> 7.0.0' # For 7.0.0
+
 gem 'haml'
 gem "haml-rails", "~> 2.0"  
 

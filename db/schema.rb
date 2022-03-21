@@ -65,8 +65,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_17_201342) do
 
   create_table "positions", force: :cascade do |t|
     t.string "name"
-    t.integer "career", default: 0
-    t.integer "contract", default: 0
+    t.integer "career"
+    t.integer "contract"
     t.boolean "remote"
     t.string "city"
     t.string "state"

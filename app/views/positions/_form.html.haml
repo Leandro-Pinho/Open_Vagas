@@ -1,0 +1,20 @@
+= simple_form_for @position do |f|
+  .mt-3
+    = f.input :name
+  .mt-3
+    = f.input :career, as: :select, collection: @careers, label_method: :second, value_method: :first, include_blank: false, selected: @position.career
+  .mt-3
+    = f.input :contract, as: :select, collection: @contracts, label_method: :second, value_method: :first, include_blank: false, selected: @position.contract
+  .mt-3
+  = f.input :remote 
+  = f.input :publish 
+  .mt-3
+    = f.input :city 
+  .mt-3
+    = f.input :state 
+  .mt-3
+    = f.input :sumary 
+  .mt-3
+    = f.input :description 
+  .mt-3
+    = f.button :submit, class: "btn btn-primary"
