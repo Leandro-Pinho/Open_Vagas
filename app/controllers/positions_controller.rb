@@ -50,7 +50,7 @@ class PositionsController < ApplicationController
   end
 
   def set_i18n_careers
-    @careers = I18n.t('activerecord.attributes.position.careers').values.to_a[index]
+    @careers = I18n.t('activerecord.attributes.position.careers')
     # @careers = []
     # Position.careers.each_with_index do |career, index|
     #   @careers << [
@@ -61,7 +61,7 @@ class PositionsController < ApplicationController
   end
 
   def set_i18n_contracts 
-    @contracts = I18n.t('activerecord.attributes.position.contracts').values.to_a[index]
+    @contracts = I18n.t('activerecord.attributes.position.contracts')
     # @contracts = []
     # Position.contracts.each_with_index do |career, index|
     #   @contracts << [

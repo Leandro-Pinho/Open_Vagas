@@ -13,6 +13,8 @@
         - if user_signed_in?
           %li.nav-item
             %a.nav-link.active{"aria-current" => "page", :href => dynamic_url_company} Minha Empresa
+          %li.nav-item
+            %a.nav-link.active{"aria-current" => "page", :href => positions_url} Minhas Vagas
           %li.nav-item.dropdown
             %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"aria-expanded" => "false", "data-bs-toggle" => "dropdown", :href => "#", :role => "button"}
               Sair

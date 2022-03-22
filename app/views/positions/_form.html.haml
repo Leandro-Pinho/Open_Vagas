@@ -13,8 +13,13 @@
   .mt-3
     = f.input :state 
   .mt-3
-    = f.input :sumary 
+    = f.input :sumary, maxlength: 360, input_html: { class: 'count-textarea', rows: 4 } 
+  -# mostra o numero de caracteres no textarea
+  #the-count  
+    %span#current 0
+    %span#maximun / 360
   .mt-3
-    = f.input :description 
+    %label Descrição
+    = f.rich_text_area :description 
   .mt-3
     = f.button :submit, class: "btn btn-primary"
