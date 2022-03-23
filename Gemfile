@@ -62,9 +62,9 @@ gem 'bootstrap', '~> 5.1.3'
 
 gem 'jquery-rails'
 
-# gem 'Kaminari'
-# gem 'Kaminari-bootstrap'
-# gem 'ransack'
+gem 'kaminari'
+gem 'bootstrap4-kaminari-views'
+gem 'ransack'
 # gem 'selects-rails'
 
 # Use Sass to process CSS

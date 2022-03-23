@@ -11,7 +11,7 @@
   .mt-3
     = f.input :city 
   .mt-3
-    = f.input :state 
+    = f.input :state, as: :select, collection: Brazil.states, label_method: :second, value_method: :first
   .mt-3
     = f.input :sumary, maxlength: 360, input_html: { class: 'count-textarea', rows: 4 } 
   -# mostra o numero de caracteres no textarea
