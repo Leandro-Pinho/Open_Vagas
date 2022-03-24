@@ -46,13 +46,13 @@ gem "bootsnap", require: false
 gem 'figaro'
 # para formulario
 gem 'simple_form'
-
+# para autenticação 
 gem 'devise'
 
 gem 'devise-i18n'
 
 gem 'rails-i18n', '~> 7.0.0' # For 7.0.0
-
+# para mudar o formato 'erb' e 'haml'
 gem 'haml'
 gem "haml-rails", "~> 2.0"  
 
@@ -61,8 +61,8 @@ gem "sassc-rails"
 gem 'bootstrap', '~> 5.1.3'
 
 gem 'jquery-rails'
-
-gem 'kaminari'
+# para a paginação
+gem 'kaminari'  
 gem 'bootstrap4-kaminari-views'
 gem 'ransack'
 # gem 'selects-rails'
@@ -85,7 +85,7 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
-  gem 'mailcatcher'
+  gem 'mailcatcher' # para usar email
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
