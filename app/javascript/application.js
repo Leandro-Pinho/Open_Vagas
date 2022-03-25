@@ -4,6 +4,9 @@ import "controllers"
 import "trix"
 import "@rails/actiontext"
 
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
+window.Swal = Swal;
 
 //= require jquery-ui
 //= require jquery3
@@ -15,7 +18,6 @@ $(function() {
       document.querySelector('.offcanvas-collapse').classList.toggle('open')
     })
 });
-
 
 
 // função para contar caracteres
