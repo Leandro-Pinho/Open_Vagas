@@ -11,6 +11,8 @@ class Position < ApplicationRecord
   validates :name, :career, :contract, :city, :state, :sumary, presence: true
   # depois de salva chama a set_slug
   before_save :set_slug 
+  # uma vaga pode ter varios candidatos
+  has_many :applicants 
 
   private 
   # criar uma url da vaga

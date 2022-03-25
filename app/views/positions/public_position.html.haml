@@ -1,13 +1,16 @@
-%h2= "#{@position.name} - #{@position.company.name}"
+-# Pagiana de detalhes 
+-# imprime o nome da vaga e da empresa
+%h2= "#{@position.name} - #{@position.company.name}" 
+-# mostra o nome da carreira, a cidade, estado e etc. 
 %p= "#{career_name(@position.career)} - #{@position.city} / #{modality(@position)}, #{@position.state} - #{contract_name(@position.contract)}"
-
+-# mostra a descrição da vaga 
 = @position.description 
-
+-# renderiza a parte social, os icones 
 %br/
 %h5 Compartilhar  
 = render partial: 'shared/social_network', locals: {position: @position}
 
-.wrapper-form-applicant 
+.wrapper-form-applicant.mt-3 
   - if user_signed_in? 
     %p= "Insira suas informações abaixo para se candidatar à vaga de #{@position.name}"
     = render 'applicants/form' 
