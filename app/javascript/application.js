@@ -21,7 +21,7 @@ $(function() {
 
 
 // função para contar caracteres
-$(document).ready(function(){
+$(document).on('ready turbolinks:load', function(){
   if ($('.count-textarea').length > 0) {
     $('.current').text($('.count-textarea').val().length);
     $('.count-textarea').keyup(function(){
