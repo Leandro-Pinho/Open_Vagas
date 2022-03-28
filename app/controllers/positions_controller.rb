@@ -39,6 +39,11 @@ class PositionsController < ApplicationController
     if user_signed_in?
       @applicant = current_user.applicants.new(position_id: @position.id)
     end
+
+    respond_to do |format|
+      format.html 
+      format.js { render partial: 'applicants/new' }
+    end
   end  
 
   private 

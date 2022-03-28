@@ -12,6 +12,9 @@ window.Swal = Swal;
 //= require jquery3
 //= require jquery_ujs
 
+global.$ = global.jQuery = jQuery;
+window.$ = window.jQuery = jQuery;
+
 $(function() {
     'use strict'
     document.querySelector('#navbarSideCollapse').addEventListener('click', function () {
