@@ -1,9 +1,12 @@
 class ApplicantsController < ApplicationController
+  before_action :set_position, only: [:index]
+
   def index
+    # redirect_to applicants_path if @position.nil?
+    @applicants = @position.applicants
   end
 
-  def new
-  end
+  def new; end
 
   def create 
     @applicant = current_user.applicants.new(applicant_params)
@@ -24,6 +27,14 @@ class ApplicantsController < ApplicationController
   end
 
   private 
+
+  def set_position
+    begin 
+      @position = current_user.company.positions.find(params[:position_id])
+    rescue ActiveRecord::RecordNotFound => e 
+      redirect_to positions_path
+    end
+  end
 
   def applicant_params 
     params.require(:applicant).permit(:name, :email, :phone, :position_id)

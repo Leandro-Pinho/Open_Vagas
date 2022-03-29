@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   resources :companies, only: [:new, :edit, :update, :create]
-  resources :positions
-  resources :applicants, only: [:index, :new, :create]
+  resources :positions do 
+    resources :applicants, only: [:index]
+  end
+  resources :applicants, only: [:new, :create]
   root 'home#index'
   devise_for :users
 
