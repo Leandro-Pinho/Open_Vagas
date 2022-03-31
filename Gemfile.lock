@@ -380,6 +380,7 @@ DEPENDENCIES
   rails-i18n (~> 7.0.0)
   ransack
   rspec-rails
+  rubyzip
   sassc-rails
   selenium-webdriver
   simple_form

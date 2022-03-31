@@ -66,6 +66,7 @@ gem 'kaminari'
 gem 'bootstrap4-kaminari-views'
 gem 'ransack'
 # gem 'selects-rails'
+gem 'rubyzip'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
